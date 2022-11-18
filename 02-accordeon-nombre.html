@@ -5,8 +5,38 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Accordéon mémorisant par un nombre l'élèment ouvert</title>
+    <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
   </head>
   <body>
     <h1>Accordéon mémorisant par un nombre l'élèment ouvert</h1>
+
+    <section>
+      <div x-data="{ open: false }">
+        <button @click="open = ! open">Bouton 1</button>
+     
+        <span x-show="open" x-transition.scale.origin.top>
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Culpa, eos eaque laudantium quis, ab praesentium, dolorum eius minima voluptates qui voluptatem consequuntur placeat autem neque nemo sint dolor modi. Eaque.
+        </span>
+    </div>
+    </section>
+
+    <section>
+      <div x-data="{ open: false }">
+        <button @click="open = ! open">Bouton 2</button>
+     
+        <span x-show="open" x-transition>
+          Fuga debitis amet ad ab laboriosam harum illum eos, quisquam quam deserunt earum ducimus consequuntur explicabo architecto quo deleniti, aperiam sed. Minus ipsam distinctio praesentium assumenda harum reprehenderit? Beatae, aut!      
+        </div>
+      </section>
+
+      <section>
+        <div x-data="{ open: false }">
+          <button @click="open = ! open">Bouton 3</button>
+       
+          <span x-show="open" x-transition>
+            Debitis voluptatum culpa, consequatur corrupti quis consequuntur vero at perferendis rem maxime ducimus aut! Ipsa laudantium eaque ex eos quasi, deleniti maxime nemo, amet, sit sequi dolore rerum eius perspiciatis?
+          </section>
+        </div>
+
   </body>
 </html>
