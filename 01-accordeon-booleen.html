@@ -9,6 +9,7 @@
   </head>
   <body>
     <h1>Accordéon avec des booléens</h1>
+
     <div class="accordeon">
       <section>
         <div x-data="{ open: false }">
@@ -19,14 +20,22 @@
           </span>
       </div>
       </section>
+
       <section>
-        <button>bouton 2</button>
-        <p>Debitis voluptatum culpa, consequatur corrupti quis consequuntur vero at perferendis rem maxime ducimus aut! Ipsa laudantium eaque ex eos quasi, deleniti maxime nemo, amet, sit sequi dolore rerum eius perspiciatis?</p>
-      </section>
-      <section>
-        <button>bouton 3</button>
-        <p>Fuga debitis amet ad ab laboriosam harum illum eos, quisquam quam deserunt earum ducimus consequuntur explicabo architecto quo deleniti, aperiam sed. Minus ipsam distinctio praesentium assumenda harum reprehenderit? Beatae, aut!</p>
-      </section>
+        <div x-data="{ open: false }">
+          <button @click="open = ! open">Bouton 2</button>
+       
+          <span x-show="open" x-transition>
+            Fuga debitis amet ad ab laboriosam harum illum eos, quisquam quam deserunt earum ducimus consequuntur explicabo architecto quo deleniti, aperiam sed. Minus ipsam distinctio praesentium assumenda harum reprehenderit? Beatae, aut!      </div>
+        </section>
+
+        <section>
+          <div x-data="{ open: false }">
+            <button @click="open = ! open">Bouton 3</button>
+         
+            <span x-show="open" x-transition>
+              Debitis voluptatum culpa, consequatur corrupti quis consequuntur vero at perferendis rem maxime ducimus aut! Ipsa laudantium eaque ex eos quasi, deleniti maxime nemo, amet, sit sequi dolore rerum eius perspiciatis?
+            </section>
       
     </div>
   </body>
