@@ -1,12 +1,29 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="fr" x-data="{menuIsOpen : 1}">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Accordéon avec x-collapse</title>
+    <script defer src="https://unpkg.com/@alpinejs/collapse@3.x.x/dist/cdn.min.js"></script>
+    <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
   </head>
   <body>
     <h1>Accordéon avec <code>x-collapse</code></h1>
+
+    <div class="accordeon">
+      <section>
+        <button @click="menuIsOpen = 1">bouton 1</button>
+        <p x-show="menuIsOpen == 1" x-collapse>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eius incidunt consequuntur suscipit magnam vitae dolore temporibus delectus quidem pariatur! Architecto quia voluptate consequatur quisquam quae vel itaque odit, consectetur impedit.</p>
+      </section>
+      <section>
+        <button @click="menuIsOpen = 2">bouton 2</button>
+        <p x-show="menuIsOpen == 2" x-collapse>Praesentium est delectus suscipit ipsum reiciendis quidem mollitia corrupti similique voluptatibus ducimus, non, aliquid error laboriosam consequatur rem eum necessitatibus accusantium minima molestiae blanditiis, minus voluptatem labore dolore. Alias, ad!</p>
+      </section>
+      <section>
+        <button @click="menuIsOpen = 3">bouton 3</button>
+        <p x-show="menuIsOpen == 3" x-collapse>Hic illo libero, aliquam quam minus a quis corporis quas ea repellat illum similique beatae quidem esse laborum perspiciatis, omnis porro odio officia, eum possimus accusamus ipsa provident? Distinctio, delectus!</p>
+      </section>
+    </div>
   </body>
 </html>
