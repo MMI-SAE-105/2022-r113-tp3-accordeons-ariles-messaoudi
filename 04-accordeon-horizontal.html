@@ -1,83 +1,46 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="fr" x-data="{menuIsOpen : 1}">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Accordéon horizontal</title>
-    <style>
-      #accordeon {
-     /* pour que les éléments soient alignés horizontalement */
-    margin: 0px; /* pour éviter les marges par défaut */
-     padding: 0px;/* pour éviter les "padding" par défaut */
-}
-
-#accordeon li {
-    width: 107px; /* largeur de chaque élément replié 107px */
-     /* pour cacher le contenu dépassant de l'élément */
-     /* pour l'animation, transition sur width */
-     background-color: #eee;/* couleur de fond #eee */
-     /* pour enlever les puces */
-     margin: 3px;/* pour espacer les éléments, marge de 3px */
-     padding: 5px;/* pour espacer le contenu, padding de 5px */
-     border-radius: 5px;/* pour arrondir les bords de 5px */
-}
-
-#accordeon li.actif {
-     width: 317px;/* largeur de l'élément déplié 317px */
-}
-
-#accordeon li figure {
-     /* pour éviter les marges par défaut */
-     /* pour que les éléments soient alignés horizontalement */
-     /* largeur de l'élément intrérieur de 317px (= déplié) */
-}
-
-#accordeon li figure figcaption {
-     width: 200px;/* largeur du texte de 200px */
-     padding: 10px;/* pour espacer le texte, padding de 10px */
-     /* pour que les éléments soient alignés verticalement */
-    
-     /* espace entre les éléments */
-}
-
-/* Sur tous les enfants de figcation */
-#accordeon li figure figcaption > * {
-     /* pour éviter les marges par défaut */
-     /* pour éviter les "padding" par défaut */
-}
-    </style>
+    <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <link rel="stylesheet" href="css.css">
   </head>
+
   <body>
     <h1>Accordéon horizontal</h1>
-      <ul id="accordeon">
-        <li>
-          <figure>
-            <img src="https://picsum.photos/100?random=1" alt="" width="102">
-            <figcaption>
-              <h3>Lorem, ipsum dolor.</h3>
-              <p>Lorem ipsum dolor sit amet consectetur.</p>
-            </figcaption>
-          </figure>
-        </li>
-        <li>
-          <figure>
-            <img src="https://picsum.photos/100?random=2" alt="" width="102">
-            <figcaption>
-              <h3>Officiis, sapiente. Explicabo!</h3>
-              <p>Repellendus aliquam laudantium sunt suscipit voluptatibus?</p>
-            </figcaption>
-          </figure>
-        </li>
-        <li>
-          <figure>
-            <img src="https://picsum.photos/100?random=3" alt="" width="102">
-            <figcaption>
-              <h3>Quia, veritatis saepe!</h3>
-              <p>Cum commodi unde quos omnis nemo!</p>
-            </figcaption>
-          </figure>
-        </li>
-      </ul>
+
+    <ul id="accordeon">
+      <li @click="menuIsOpen = 1" :class="{'actif' : menuIsOpen == 1}">
+        <figure>
+          <img src="public/axolotl_1.jpg" alt="Axolotl 1" width="102">
+          <figcaption>
+            <h3>Lorem, ipsum dolor Bla Bla.</h3>
+            <p>Lorem ipsum dolor sit amet consectetur.</p>
+          </figcaption>
+        </figure>
+      </li>
+      <li @click="menuIsOpen = 2" :class="{'actif' : menuIsOpen == 2}">
+        <figure>
+          <img src="public/axolotl_2.jpg" alt="Axolotl 2" width="102">
+          <figcaption>
+            <h3>Dignissimos, nemo exercitationem!</h3>
+            <p>Aliquam officiis nihil eius architecto consectetur?</p>
+          </figcaption>
+        </figure>
+      </li>
+      <li @click="menuIsOpen = 3" :class="{'actif' : menuIsOpen == 3}">
+        <figure>
+          <img src="public/axolotl_3.jpg" alt="Axolotl 3" width="102">
+          <figcaption>
+            <h3>Praesentium, voluptate iure?</h3>
+            <p>Reiciendis iure ex facere iusto nobis.</p>
+          </figcaption>
+        </figure>
+      </li>
+    </ul>
   </body>
+
 </html>

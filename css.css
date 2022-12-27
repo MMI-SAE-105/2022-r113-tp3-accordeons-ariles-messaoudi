@@ -1,0 +1,75 @@
+#accordeon {
+    margin: 0;
+    padding: 0;
+}
+
+#accordeon li {
+    width: 107px;
+    height: 90px;
+    overflow: hidden;
+    transition: width 0.5s;
+    background-color: #eee;
+    list-style-type: none;
+    margin: 3px;
+    padding: 5px;
+    border-radius: 5px;
+    display:inline-block;
+}
+
+#accordeon li.actif {
+    width: 317px;
+}
+
+#accordeon li figure {
+    margin: 0px;
+    width: 317px;
+    display:inline-block;
+}
+
+#accordeon li figure figcaption {
+    width: 200px;
+    padding: 10px;
+    text-align: center;
+    padding: 5px;
+    display:inline-block;
+}
+
+/* Sur tous les enfants de figcaption */
+#accordeon li figure figcaption > * {
+    margin: 0;
+    padding: 0;
+}
+
+
+
+
+
+
+#onglets li {
+    display: inline-block;
+    padding: 5px;
+    border-style: solid;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+#onglets li.visible {
+    background-color: red;
+    color: white;
+    border-color: black;
+}
+
+#onglets li:hover {
+    border-color: red;
+}
+
+#panneaux {
+    position: relative;
+    width: 300px;
+    height: 200px;
+    border: 10px;
+}
+
+.tab {
+    position: absolute;
+}
